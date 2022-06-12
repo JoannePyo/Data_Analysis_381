@@ -10,6 +10,7 @@ print("1. Extract the numbers: ", numbers)
 print()
 
 #2. Exract the names
+#https://stackoverflow.com/questions/55194224/extract-names-from-string-with-python-regex
 #use regex. findall is returns a list containing all mathes
 regex = re.findall(r"[A-Z][a-z]+,?\s+(?:[A-Z][a-z]*\.? \s*)?[A-Z][a-z]+", new_string)
 print("2. Extract the names: " ,regex)
@@ -17,12 +18,12 @@ print()
 
 #3. Rearrange the vector so that all elements conform to the standard “firstname lastname”, 
 # preserving any titles (e.g., “Rev.”, “Dr.”, etc) or middle/second names.
-regex_withTitles = re.findall(r"(?:(?<=^)|(?<=[^A-Za-z.,]))[A-Za-z.,]+(?: [A-Za-z.,]+)*(?:(?=[^A-Za-z.,])|(?=$))", new_string)
+regex_withTitles = re.findall(r"[^()0-9-]+", new_string)
 print("3. Name: ", regex_withTitles)
 print()
 
 #4. Construct a logical vector indicating whether a character has a title (i.e., Rev. and Dr.)
-title = re.findall(r"([A-Z][a-z]*\.)", new_string)
+title = re.findall(r"[A-Z][a-z]*\.", new_string)
 print("4. Title: ", title)
 print()
 
