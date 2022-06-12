@@ -27,7 +27,7 @@ title = re.findall(r"[A-Z][a-z]*\.", new_string)
 print("4. Title: ", title)
 print()
 
-#5. Construct a logical vector indicating whether a character has a middle/second name.  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!
+#5. Construct a logical vector indicating whether a character has a middle/second name.
 middle_name =re.findall(r"\s[A-Z][a-z]+,?\s+(?:[A-Z][a-z]*\.? \s*)", new_string)
 print("5. Middle or second name: ",middle_name)
 print()
